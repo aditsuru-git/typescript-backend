@@ -1,0 +1,35 @@
+{
+	"name": "typescript-backend",
+	"version": "1.0.0",
+	"description": "<div align=\"center\">   <img src=\"https://github.com/aditsuru-git/readme-template/blob/main/assets/header.png?raw=true\" alt=\"Project Banner\" width=\"100%\" style=\"max-width: 1200px;\"> </div>",
+	"main": "index.js",
+	"scripts": {
+		"build": "rimraf dist && npx tsc",
+		"postbuild": "npx prettier \"**/*.{ts,js,json,html,css,md}\" --write",
+		"prestart": "npm run build",
+		"prestart:dev": "npm run build",
+		"start": "node dist/index.js",
+		"start:dev": "node -r dotenv/config dist/index.js",
+		"format": "npx prettier \"src/**/*.ts\" --write",
+		"dev": "nodemon"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aditsuru-git/typescript-backend.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/aditsuru-git/typescript-backend/issues"
+	},
+	"homepage": "https://github.com/aditsuru-git/typescript-backend#readme",
+	"devDependencies": {
+		"dotenv": "^16.5.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.3",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	}
+}

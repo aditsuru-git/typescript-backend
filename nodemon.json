@@ -1,0 +1,8 @@
+{
+	"watch": ["src", ".env", "*.json"],
+	"ext": "ts,json",
+	"ignore": ["node_modules", "dist", "test/", "*.spec.ts"],
+	"exec": "ts-node -r dotenv/config ./src/index.ts",
+
+	"delay": "250"
+}
