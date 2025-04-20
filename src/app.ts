@@ -1,6 +1,7 @@
-import express, { Response, Request } from "express";
+import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import cookieParser from "cookie-parser";
 import { JSON_LIMIT, URL_ENCODED_LIMIT } from "./constants";
 
 const app = express();
@@ -20,9 +21,12 @@ app.use(
 		limit: URL_ENCODED_LIMIT,
 	}),
 );
+app.use(cookieParser());
 app.use(helmet());
 app.use(express.static("./public"));
 
 // routes
+import getUser from "./routes/get-user.route";
+app.use("/", getUser);
 
 export { app };

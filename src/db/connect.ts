@@ -6,7 +6,7 @@ export async function connect() {
 			`${process.env.MONGODB_URI}/${process.env.DB}`,
 		);
 		console.log(
-			`⚙️ Connected to DB at URI: ${connectionInstance.connection.host}\n	Using DB: ${connectionInstance.connection.db}`,
+			`⚙️  Connected to DB at URI: ${connectionInstance.connection.host}\nUsing DB: ${connectionInstance.connection.name}`,
 		);
 	} catch (error) {
 		console.error(error);
